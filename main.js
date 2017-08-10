@@ -21,15 +21,16 @@ fetch ("https://api.got.show/api/characters/")
           if (data[i].books[b] === "The World of Ice and Fire" && characters.length < 20){
             let character = `
                 <div>
-                    <img src='${data[i].imageLink}'>
-                    <h5>Name = ${data[i].name}</h5>
+                    <img class="headshot" src=https://api.got.show${data[i].imageLink}>
+                    <h5 class="name">${data[i].name}</h5>
                 </div>
                             `;
               characters.push(character);
           }
       }
     }
-  // append the characters to the body once the html page is built
+  // document.querySelector(".container").innerHTML = titles;append the characters to the body once the html page is built
+    document.querySelector(".character1").innerHTML = characters;
     console.log(characters);
 
 

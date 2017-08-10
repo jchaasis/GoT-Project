@@ -1,0 +1,23 @@
+.container h1 {
+	font-family: Garamond, Verdana;
+	color: #312d2d;
+	font-size: 500;
+	font-weight: 40px;
+	text-decoration-line: underline;
+  	text-decoration-color: #46a1ea;
+}
+
+.headshot {
+	border-radius: 50%;
+	max-width: 100%;
+    height: auto;
+    width: 100px;
+}
+
+.name {
+	font-family: Garamond, Verdana;
+	color: #312d2d;
+	text-decoration-line: underline;
+	text-decoration-color: #46a1ea;
+	font-size: 15px;
+}
