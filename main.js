@@ -32,6 +32,8 @@ fetch ("https://api.got.show/api/characters/")
   // append the characters to the body once the html page is built
     console.log(characters);
 
+//
+
 
   });
 
@@ -39,21 +41,27 @@ fetch ("https://api.got.show/api/characters/")
 
 fetch ("https://api.got.show/api/houses/")
 
-    .then(convertData)
-    .then( function(data){
+    .then(function(results){
+      return results.json(results);
+    })
+    .then( function(results){
       //list of the first 20 houses
       let houses = [];
 
-      for (let h = 0; h < data.length; h++){
+      for (let h = 0; h < results.length; h++){
         if (houses.length < 20){
         let house = `
                   <div>
-                      <img src="${data[h].imageLink}">
-                      <h5>Name = ${data[h].name}</h5>
+                      <img src=https://api.got.show${results[h].imageLink}>
+                      <h5>Name = ${results[h].name}</h5>
                   </div>
         `;
             houses.push(house);
         }
       }
       console.log(houses);
+
+      let houseResults = document.querySelector(".haus")
+      houseResults.innerHTML = houses;
+
     });
